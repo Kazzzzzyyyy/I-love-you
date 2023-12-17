@@ -3,71 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Note Web App</title>
+    <title>Gradient Website</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            background: linear-gradient(to right, #f3f3f3, #ffd6e5); /* Pale grey to pink gradient */
         }
 
-        #container {
-            text-align: center;
-        }
-
-        #envelope-btn {
-            font-size: 2em;
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #fff;
+            color: #ff66a1; /* Pink color */
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-        }
-
-        #note-container {
-            display: none;
-            margin-top: 20px;
-        }
-
-        #note {
-            font-size: 1.5em;
-            background-color: #ffffff;
-            padding: 20px;
-            border: 2px solid #000000;
-            display: inline-block;
-            filter: blur(5px);
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="envelope-btn" onclick="openEnvelope()">💌</div>
-        <div id="note-container">
-            <div id="note"></div>
-        </div>
-    </div>
 
-    <script>
-        function openEnvelope() {
-            // Hide the button and show the note container
-            document.getElementById('envelope-btn').style.display = 'none';
-            document.getElementById('note-container').style.display = 'block';
+    <button onclick="alert('Button clicked!')">Click Here</button>
 
-            // Select a random note from a pre-written set
-            const notes = [
-                "I love you more than words can express.",
-                "You mean the world to me.",
-                "Thinking of you brightens my day.",
-                "You are my sunshine.",
-                "Every moment with you is precious."
-            ];
-            const randomNote = notes[Math.floor(Math.random() * notes.length)];
-
-            // Display the selected note on the pixellated letter
-            const noteElement = document.getElementById('note');
-            noteElement.innerText = randomNote;
-            noteElement.style.filter = 'none'; // Remove the blur effect
-        }
-    </script>
 </body>
 </html>
 
